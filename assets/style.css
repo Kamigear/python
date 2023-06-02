@@ -1,0 +1,80 @@
+  
+
+body {
+  background-image: url("Background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center {
+text-align: center;
+}
+
+.straight {
+display: inline;
+margin-left: 900px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin:5 10px;}
+
+/*Button 1A settings*/
+#Button1A{
+  background-image: url("image1A.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button2B{
+  background-image: url("image1B.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button2A{
+  background-image: url("image2A.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button1B{
+  background-image: url("image2B.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button3A{
+  background-image: url("image3A.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button4B{
+  background-image: url("image3B.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button4A{
+  background-image: url("image4A.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button3B{
+  background-image: url("image4B.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
