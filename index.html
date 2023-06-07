@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="assets/Styles.css">
@@ -71,13 +72,11 @@
           // Hide the matching buttons
           button.classList.add("hidden");
           document.getElementById(firstButtonId).classList.add("hidden");
-          score += 2;
+          updateScore();
 
-                if (score >= 10) {
-        showCongratsMessage();
-      }
-
-          document.getElementById("scoreLabel").textContent = "Score: " + score; // Update the score label
+          if (score >= 20) {
+            showCongratsMessage();
+          }
         } else {
           // Perform some other action if the condition is not met
           alert("Salah");
@@ -90,8 +89,8 @@
     }
 
     function showCongratsMessage() {
-      alert("Congratulations! Click OK to redirect.");
-      window.location.href = "https://docs.google.com/forms/d/1_yxidge2dJtt4UfzQdl8CJ4VRFT8rHXVCyK5Y3LNHlY/edit";
+      alert("Congratulations! You reached a score of 20!");
+      // Additional actions or code here
     }
   </script>
 </body>
