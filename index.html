@@ -1,0 +1,91 @@
+<html>
+<head>
+  <link rel="stylesheet" href="assets/Styles.css">
+  <title>Match Making</title>
+  <style>
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    .button-container button {
+      display: block;
+      width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>Games</h1>
+    <h3>Klik untuk menyambung ke yang benar!</h3>
+  </div>
+  <div class="straight">
+    <label id="scoreLabel" style="font-size: 20px;">Score: </label>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button1A" onclick="checkButton('Button1A')"></button>
+    <button type="button" id="Button1B" onclick="checkButton('Button1B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button2A" onclick="checkButton('Button2A')"></button>
+    <button type="button" id="Button2B" onclick="checkButton('Button2B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button3A" onclick="checkButton('Button3A')"></button>
+    <button type="button" id="Button3B" onclick="checkButton('Button3B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button4A" onclick="checkButton('Button4A')"></button>
+    <button type="button" id="Button4B" onclick="checkButton('Button4B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button5A" onclick="checkButton('Button5A')"></button>
+    <button type="button" id="Button5B" onclick="checkButton('Button5B')"></button>
+  </div>
+  
+  <script>
+    var score = 0;
+    var totalButtons = 10;
+    var checkedButtons = []; // List to store checked button names
+
+    function updateScore() {
+      score += 2;
+      document.getElementById("scoreLabel").textContent = "Score: " + score;
+    }
+
+    function checkButton(buttonId) {
+      var button = document.getElementById(buttonId);
+      checkedButtons.push(buttonId); // Add button ID to the list
+
+      if (checkedButtons.length > 1) {
+        var firstButtonId = checkedButtons[0];
+        if (buttonId[buttonId.length - 2] === firstButtonId[firstButtonId.length - 2]) {
+          // Second last number is the same for all checked buttons
+          alert("Benar!");
+
+          // Hide the matching buttons
+          button.classList.add("hidden");
+          document.getElementById(firstButtonId).classList.add("hidden");
+        } else {
+          // Perform some other action if the condition is not met
+          alert("Salah");
+          <meta http-equiv="refresh" content="5;url=http://example.com">
+        }
+
+        // Reset checkedButtons array
+        checkedButtons = [];
+      }
+    }
+
+    function showCongratsMessage() {
+      alert("Congratulations! Click OK to redirect.");
+      window.location.href = "https://docs.google.com/forms/d/1_yxidge2dJtt4UfzQdl8CJ4VRFT8rHXVCyK5Y3LNHlY/edit";
+    }
+  </script>
+</body>
+</html>

@@ -1,5 +1,3 @@
-  
-
 body {
   background-image: url("Background.jpg");
   background-repeat: no-repeat;
@@ -7,74 +5,91 @@ body {
 }
 
 .center {
-text-align: center;
+  text-align: center;
 }
 
 .straight {
-display: inline;
-margin-left: 900px;
+  display: inline;
+  margin-left: 900px;
 }
 
-
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin:5 10px;}
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 10px;
+}
 
-/*Button 1A settings*/
-#Button1A{
+/* Button 1A settings */
+#Button1A {
   background-image: url("image1A.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button2B{
+#Button1B {
   background-image: url("image1B.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button2A{
+/* Button 2A settings */
+#Button2A {
   background-image: url("image2A.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button1B{
+#Button2B {
   background-image: url("image2B.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button3A{
+/* Button 3A settings */
+#Button3A {
   background-image: url("image3A.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button4B{
+#Button3B {
   background-image: url("image3B.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button4A{
+/* Button 4A settings */
+#Button4A {
   background-image: url("image4A.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
-#Button3B{
+#Button4B {
   background-image: url("image4B.jpg");
   background-size: cover;
   width: 81px;
   height: 93px;
 }
 
+/* Button 5A settings */
+#Button5A {
+  background-image: url("image5A.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
+
+#Button5B {
+  background-image: url("image5B.jpg");
+  background-size: cover;
+  width: 81px;
+  height: 93px;
+}
