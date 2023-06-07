@@ -13,6 +13,7 @@
       display: block;
       width: 100%;
     }
+<<<<<<< HEAD
 
     .hidden {
       display: none;
@@ -20,6 +21,12 @@
   </style>
 </head>
 <body>
+=======
+  </style>
+</head>
+<body>
+
+>>>>>>> origin/main
   <div class="center">
     <h1>Games</h1>
     <h3>Klik untuk menyambung ke yang benar!</h3>
@@ -28,6 +35,7 @@
     <label id="scoreLabel" style="font-size: 20px;">Score: </label>
   </div>
   <div class="button-container">
+<<<<<<< HEAD
     <button type="button" id="Button1A" onclick="checkButton('Button1A')"></button>
     <button type="button" id="Button1B" onclick="checkButton('Button1B')"></button>
   </div>
@@ -46,18 +54,40 @@
   <div class="button-container">
     <button type="button" id="Button5A" onclick="checkButton('Button5A')"></button>
     <button type="button" id="Button5B" onclick="checkButton('Button5B')"></button>
+=======
+    <button type="button" id="Button1A" onclick="deleteButton('Button1A')"></button>
+    <button type="button" id="Button1B" onclick="deleteButton('Button1B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button2A" onclick="deleteButton('Button2A')"></button>
+    <button type="button" id="Button2B" onclick="deleteButton('Button2B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button3A" onclick="deleteButton('Button3A')"></button>
+    <button type="button" id="Button3B" onclick="deleteButton('Button3B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button4A" onclick="deleteButton('Button4A')"></button>
+    <button type="button" id="Button4B" onclick="deleteButton('Button4B')"></button>
+>>>>>>> origin/main
   </div>
   
   <script>
     var score = 0;
+<<<<<<< HEAD
     var totalButtons = 10;
     var checkedButtons = []; // List to store checked button names
+=======
+    var totalButtons = 8;
+    var deletedButtons = 0;
+>>>>>>> origin/main
 
     function updateScore() {
       score += 2;
       document.getElementById("scoreLabel").textContent = "Score: " + score;
     }
 
+<<<<<<< HEAD
     function checkButton(buttonId) {
       var button = document.getElementById(buttonId);
       checkedButtons.push(buttonId); // Add button ID to the list
@@ -79,6 +109,16 @@
 
         // Reset checkedButtons array
         checkedButtons = [];
+=======
+    function deleteButton(buttonId) {
+      var button = document.getElementById(buttonId);
+      button.style.visibility = 'hidden';
+      deletedButtons++;
+      updateScore();
+
+      if (deletedButtons === totalButtons) {
+        showCongratsMessage();
+>>>>>>> origin/main
       }
     }
 
@@ -86,6 +126,20 @@
       alert("Congratulations! Click OK to redirect.");
       window.location.href = "https://docs.google.com/forms/d/1_yxidge2dJtt4UfzQdl8CJ4VRFT8rHXVCyK5Y3LNHlY/edit";
     }
+<<<<<<< HEAD
   </script>
+=======
+
+    function shuffleButtons() {
+      var buttonContainer = document.getElementsByClassName('button-container')[0];
+      for (var i = buttonContainer.children.length; i >= 0; i--) {
+        buttonContainer.appendChild(buttonContainer.children[Math.random() * i | 0]);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', shuffleButtons);
+  </script>
+
+>>>>>>> origin/main
 </body>
 </html>
