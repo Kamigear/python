@@ -29,23 +29,23 @@
   </div>
   <div class="button-container">
     <button type="button" id="Button1A" onclick="checkButton('Button1A')"></button>
-    <button type="button" id="Button1B" onclick="checkButton('Button1B')"></button>
-  </div>
-  <div class="button-container">
-    <button type="button" id="Button2A" onclick="checkButton('Button2A')"></button>
     <button type="button" id="Button2B" onclick="checkButton('Button2B')"></button>
   </div>
   <div class="button-container">
-    <button type="button" id="Button3A" onclick="checkButton('Button3A')"></button>
-    <button type="button" id="Button3B" onclick="checkButton('Button3B')"></button>
+    <button type="button" id="Button2A" onclick="checkButton('Button2A')"></button>
+    <button type="button" id="Button1B" onclick="checkButton('Button1B')"></button>
   </div>
   <div class="button-container">
-    <button type="button" id="Button4A" onclick="checkButton('Button4A')"></button>
+    <button type="button" id="Button3A" onclick="checkButton('Button3A')"></button>
     <button type="button" id="Button4B" onclick="checkButton('Button4B')"></button>
   </div>
   <div class="button-container">
-    <button type="button" id="Button5A" onclick="checkButton('Button5A')"></button>
+    <button type="button" id="Button4A" onclick="checkButton('Button4A')"></button>
     <button type="button" id="Button5B" onclick="checkButton('Button5B')"></button>
+  </div>
+  <div class="button-container">
+    <button type="button" id="Button5A" onclick="checkButton('Button5A')"></button>
+    <button type="button" id="Button3B" onclick="checkButton('Button3B')"></button>
   </div>
   
   <script>
@@ -72,6 +72,11 @@
           button.classList.add("hidden");
           document.getElementById(firstButtonId).classList.add("hidden");
           score += 2;
+
+                if (score >= 10) {
+        showCongratsMessage();
+      }
+
           document.getElementById("scoreLabel").textContent = "Score: " + score; // Update the score label
         } else {
           // Perform some other action if the condition is not met
